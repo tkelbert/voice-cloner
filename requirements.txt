@@ -1,0 +1,11 @@
+# Replace with the updated version
+cat > requirements.txt << 'EOF'
+numpy>=1.19.0
+torch>=1.7.0
+librosa>=0.8.0
+soundfile>=0.10.0
+matplotlib>=3.3.0
+PyQt5>=5.15.0
+pyaudio>=0.2.11
+pydub>=0.25.1
+EOF
