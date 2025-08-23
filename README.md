@@ -34,3 +34,19 @@ python simple_voice_cloner_gui.py
 
 The application lets you pick a short voice sample, enter text and synthesize a WAV file using that voice.
 
+
+## PySide6 XTTSv2 Voice Cloner
+
+A modular PySide6 application backed by Coqui XTTSv2. It can run in an isolated Docker container to avoid dependency conflicts.
+
+### Build and run with Docker
+
+```bash
+docker build -t voice-cloner-app .
+docker run -it --rm --gpus all \
+    -v "$(pwd)/outputs":/app/outputs \
+    --device /dev/snd:/dev/snd \
+    voice-cloner-app
+```
+
+The container launches the GUI automatically. Generated audio is saved inside the `outputs` directory on the host.
